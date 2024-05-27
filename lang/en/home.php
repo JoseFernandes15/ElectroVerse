@@ -11,6 +11,6 @@ return
     'sale' => 'off',
     'sale_name' => 'Winter sales',
     'insta' => 'Our instagram',
-    'add' => 'Add',
+    'add' => 'Add to cart',
     'sale_btn' => 'View offers',
 ];
