@@ -2,33 +2,25 @@
         <div class="search-popup-container">
 
           <form role="search" method="get" class="search-form" action="">
-            <input type="search" id="search-form" class="search-field" placeholder="Type and press enter" value="" name="s" />
+            <input type="search" id="search-form" class="search-field" placeholder="{{ __('nav.input') }}" value="" name="s" />
             <button type="submit" class="search-submit"><svg class="search"><use xlink:href="#search"></use></svg></button>
           </form>
 
-          <h5 class="cat-list-title">Browse Categories</h5>
+          <h5 class="cat-list-title">{{ __('nav.browse') }}</h5>
           
           <ul class="cat-list">
             <li class="cat-list-item">
-              <a href="#" title="Mobile Phones">Mobile Phones</a>
+              <a href="#" title="{{ __('nav.consoles') }}">{{ __('nav.consoles') }}</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="Smart Watches">Smart Watches</a>
+              <a href="#" title="{{ __('nav.tablets') }}">{{ __('nav.tablets') }}</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="Headphones">Headphones</a>
+              <a href="#" title="{{ __('nav.computers') }}">{{ __('nav.computers') }}</a>
             </li>
             <li class="cat-list-item">
-              <a href="#" title="Accessories">Accessories</a>
+              <a href="#" title="{{ __('nav.accessories') }}">{{ __('nav.accessories') }}</a>
             </li>
-            <li class="cat-list-item">
-              <a href="#" title="Monitors">Monitors</a>
-            </li>
-            <li class="cat-list-item">
-              <a href="#" title="Speakers">Speakers</a>
-            </li>
-            <li class="cat-list-item">
-              <a href="#" title="Memory Cards">Memory Cards</a>
             </li>
           </ul>
 

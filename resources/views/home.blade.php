@@ -79,8 +79,8 @@
               <div class="row d-flex flex-wrap align-items-center">
                 <div class="col-md-6">
                   <div class="banner-content">
-                    <h1 class="display-2 text-uppercase text-dark pb-5">Technology Hack You Won't Get</h1>
-                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
+                    <h1 class="display-2 text-uppercase text-dark pb-5">{{ __('home.banner1') }}</h1>
+                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">{{ __('home.btn_shop') }}</a>
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -96,8 +96,8 @@
               <div class="row d-flex flex-wrap align-items-center">
                 <div class="col-md-6">
                   <div class="banner-content">
-                    <h1 class="display-2 text-uppercase text-dark pb-5">Technology Hack You Won't Get</h1>
-                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
+                    <h1 class="display-2 text-uppercase text-dark pb-5">{{ __('home.banner2') }}</h1>
+                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">{{ __('home.btn_shop') }}</a>
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -113,8 +113,8 @@
               <div class="row d-flex flex-wrap align-items-center">
                 <div class="col-md-6">
                   <div class="banner-content">
-                    <h1 class="display-2 text-uppercase text-dark pb-5">Technology Hack You Won't Get</h1>
-                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Product</a>
+                    <h1 class="display-2 text-uppercase text-dark pb-5">{{ __('home.banner3') }}</h1>
+                    <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">{{ __('home.btn_shop') }}</a>
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -126,16 +126,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="swiper-icon swiper-arrow swiper-arrow-prev">
-        <svg class="chevron-left">
-          <use xlink:href="#chevron-left" />
-        </svg>
-      </div>
-      <div class="swiper-icon swiper-arrow swiper-arrow-next">
-        <svg class="chevron-right">
-          <use xlink:href="#chevron-right" />
-        </svg>
       </div>
     </section>
     <section id="company-services" class="padding-large">
@@ -200,9 +190,9 @@
       <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
-            <h2 class="display-7 text-dark text-uppercase">Mobile Products</h2>
+            <h2 class="display-7 text-dark text-uppercase">{{ __('home.popular') }}</h2>
             <div class="btn-right">
-              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">{{ __('home.btn_shop') }}</a>
             </div>
           </div>
           <div class="swiper product-swiper">
@@ -214,7 +204,7 @@
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">{{ __('home.add') }}<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -307,9 +297,9 @@
       <div class="container">
         <div class="row">
           <div class="display-header d-flex justify-content-between pb-3">
-            <h2 class="display-7 text-dark text-uppercase">Smart Watches</h2>
+            <h2 class="display-7 text-dark text-uppercase">{{ __('home.accessories') }}</h2>
             <div class="btn-right">
-              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+              <a href="shop.html" class="btn btn-medium btn-normal text-uppercase">{{ __('home.btn_shop') }}</a>
             </div>
           </div>
           <div class="swiper product-watch-swiper">
@@ -321,7 +311,7 @@
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">{{ __('home.add') }}<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -414,9 +404,9 @@
       <div class="row d-flex flex-wrap align-items-center">
         <div class="col-md-6 col-sm-12">
           <div class="text-content offset-4 padding-medium">
-            <h3>10% off</h3>
-            <h2 class="display-2 pb-5 text-uppercase text-dark">New year sale</h2>
-            <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Sale</a>
+            <h3>10% {{ __('home.sale') }}</h3>
+            <h2 class="display-2 pb-5 text-uppercase text-dark">{{ __('home.sale_name') }}</h2>
+            <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">{{ __('home.sale_btn') }}</a>
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -592,7 +582,7 @@
       <div class="container">
         <div class="row">
           <div class="display-header text-uppercase text-dark text-center pb-3">
-            <h2 class="display-7">Shop Our Insta</h2>
+            <h2 class="display-7">{{ __('home.insta') }}</h2>
           </div>
           <div class="d-flex flex-wrap">
             <figure class="instagram-item pe-2">

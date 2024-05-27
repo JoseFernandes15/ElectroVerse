@@ -2,29 +2,25 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
+use App\Http\Middleware\GetLocale;
 
 
-    function setLang(){
-        if(session('locale')){
-            $locale=session('locale');
-            App::setLocale($locale);
-        }
-    };
+Route::middleware([GetLocale::class])->group(function () {
     Route::get('/', function () {
-        setLang();
+        
         return view('home');
     })->name('home');
 
     Route::get('/product', function () {
-        setLang();
+        
         return view('product');
     })->name('product');
 
     Route::get('/shop', function () {
-        setLang();
+        
         return view('shop');
     })->name('shop');
-
+});
     Route::get('/setlocale/{locale}', function (string $locale) {
         if (! in_array($locale, ['en', 'pt', 'es'])) {
             print 'Invalid locale';
