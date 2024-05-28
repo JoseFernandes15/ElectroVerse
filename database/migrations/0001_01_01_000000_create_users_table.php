@@ -36,17 +36,6 @@ return new class extends Migration
             $table->integer('last_activity')->index();
         });
 
- 	Schema::create('items', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->float('price')->unique();
-            $table->timestamp('created_at');
-            $table->string('description');
-            $table->string('origin');
-            $table->string('type');
-	    $table->string('weight');
-        });
-
     }
 
     /**
@@ -57,6 +46,5 @@ return new class extends Migration
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
-	Schema::dropIfExists('items');
     }
 };
