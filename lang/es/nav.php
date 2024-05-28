@@ -17,4 +17,8 @@
     'contact_text2' => 'José Pedro Sampaio Fernandes.',
     'ship' => 'Enviamos con:',
     'payment' => 'Formas de pago:',
+
+    // Search modal
+    'input' => 'Escreva aqui e presse enter',
+    'browse' => 'Buscar Categorías',
 ];

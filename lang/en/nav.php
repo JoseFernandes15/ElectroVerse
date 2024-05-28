@@ -17,4 +17,8 @@
     'contact_text2' => 'José Pedro Sampaio Fernandes.',
     'ship' => 'We ship with:',
     'payment' => 'Payment options:',
+
+    // Search modal
+    'input' => 'Type here and press enter',
+    'browse' => 'BROWSE CATEGORIES',
 ];
