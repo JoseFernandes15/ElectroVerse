@@ -1,0 +1,27 @@
+<?php
+return
+[
+    'home' => 'Inicio',
+    'shop' => 'Productos',
+    'all' => 'Todo',
+    'consolas' => 'Consolas',
+    'tablets' => 'Tabletas',
+    'computers' => 'Ordenadores',
+    'accessories' => 'Accesorios',
+    'sales' => 'Saldos',
+    'list_show' => 'Mostrando',
+    'list_result' => 'resultados',
+    'def_sort' => 'Orden Común',
+    'az_sort' => 'Nombre (A - Z)',
+    'za_sort' => 'Nombre (Z - A)',
+    'lh_sort' => 'Precio (Bajo - Alto)',
+    'hl_sort' => 'Precio (Alto - Bajo)',
+    'rh_sort' => 'Rating(Máxima)',
+    'rl_sort' => 'Rating(Más baja)',
+    'search' => 'Buscar',
+    'categories' => 'Categorías',
+    'brands' => 'Marcas',
+    'filter_price' => 'Filtrar por precio',
+    'less' => 'Menos de',
+    'add' => 'Añadir',
+];

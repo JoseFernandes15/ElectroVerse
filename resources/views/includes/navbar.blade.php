@@ -84,12 +84,22 @@
                       <li>
                       <a href="{{ route('setLocale', 'es') }}" class="dropdown-item">ES</a>
                       </li>
+                    @elseif(session('locale')=='es')
+                    <li>
+                      <a href="{{ route('setLocale', 'pt') }}" class="dropdown-item">PT</a>
+                      </li>
+                      <li>
+                      <a href="{{ route('setLocale', 'en') }}" class="dropdown-item">EN</a>
+                      </li>
                     @else
                     <li>
                       <a href="{{ route('setLocale', 'pt') }}" class="dropdown-item">PT</a>
                       </li>
                       <li>
                       <a href="{{ route('setLocale', 'en') }}" class="dropdown-item">EN</a>
+                      </li>
+                      <li>
+                      <a href="{{ route('setLocale', 'es') }}" class="dropdown-item">ES</a>
                       </li>
                     @endif
                   </ul>

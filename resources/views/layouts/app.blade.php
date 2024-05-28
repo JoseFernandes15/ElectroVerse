@@ -14,6 +14,8 @@
     @vite('resources/css/style.css')
     @vite('resources/css/vendor.css')
     @vite('resources/css/bootstrap.min.css')
+    @vite('resources/css/shop.css')
+    @vite('resources/css/swiper.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

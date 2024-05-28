@@ -9,11 +9,13 @@ export default defineConfig({
                 'resources/css/style.css',
                 'resources/css/vendor.css',
                 'resources/css/bootstrap.min.css',
-                'resources/js/app.js',
+                'resources/css/swiper.css',
+                'resources/css/shop.js',
                 'resources/js/bootstrap.bundle.min.js',
                 'resources/js/bootstrap.js',
                 'resources/js/jquery-1.11.0.min.js',
-                'resources/js/script.js'
+                'resources/js/script.js',
+                'resources/js/app.js'
                 ],
             refresh: true,
         }),
