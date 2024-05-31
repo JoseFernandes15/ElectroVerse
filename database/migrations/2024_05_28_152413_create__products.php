@@ -39,6 +39,8 @@ return new class extends Migration
             $table->float('weight');
             $table->integer('quantity');
             $table->string('image');
+            $table->boolean('sale');
+            $table->integer('sale_percentage')->nullable();
             $table->float('rating')->nullable();
             $table->text('additional_info')->nullable();
             $table->timestamps();

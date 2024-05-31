@@ -17,13 +17,16 @@
         </div>
       </div>
     </section>
+            @php
+              $len = sizeof($products);
+            @endphp
     <div class="shopify-grid padding-large">
       <div class="container">
         <div class="row">
           <main class="col-md-9">
             <div class="filter-shop d-flex justify-content-between">
               <div class="showing-product">
-                <p>{{ __('shop.list_show') }} 1-9 of 55 {{ __('shop.list_result') }}</p>
+                <p>{{ __('shop.list_show') }} 1-9 of {{$len}} {{ __('shop.list_result') }}</p>
               </div>
               <div class="sort-by">
                 <select id="input-sort" class="form-control" data-filter-sort="" data-filter-order="">
@@ -38,10 +41,13 @@
               </div>
             </div>
             <div class="product-content product-store d-flex justify-content-between flex-wrap">
+            
+            @if($len>0)
+            @foreach ($products as $product)
               <div class="col-lg-4 col-md-6">
                 <div class="product-card position-relative pe-3 pb-3">
                   <div class="image-holder">
-                    <img src="/storage/images/product-item1.jpg" alt="product-item" class="img-fluid">
+                    <img src="{{ $product->image }}" alt="product-item" class="img-fluid" style="width: 310px !important; height: 350px !important;">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
@@ -55,197 +61,14 @@
                   </div>
                   <div class="card-detail d-flex justify-content-between pt-3 pb-3">
                     <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">Iphone 10</a>
+                      <a href="{{ route('product', $product->id) }}">{{ $product->name }}</a>
                     </h3>
-                    <span class="item-price text-primary">$980</span>
+                    <span class="item-price text-primary">{{ $product->price }}€</span>
                   </div>
                 </div>                  
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="product-card position-relative pe-3 pb-3">
-                  <div class="image-holder">
-                    <img src="/storage/images/product-item2.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="https://demo.templatesjungle.com/ministore/shop.html#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">Iphone 11</a>
-                    </h3>
-                    <span class="item-price text-primary">$110</span>
-                  </div>
-                </div>                  
+              @endforeach
               </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="product-card position-relative pe-3 pb-3">
-                  <div class="image-holder">
-                    <img src="/storage/images/product-item3.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="https://demo.templatesjungle.com/ministore/shop.html#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">Iphone 8</a>
-                    </h3>
-                    <span class="item-price text-primary">$780</span>
-                  </div>
-                </div>                  
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="product-card position-relative pe-3 pb-3">
-                  <div class="image-holder">
-                    <img src="/storage/images/product-item4.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="https://demo.templatesjungle.com/ministore/shop.html#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">Iphone 13</a>
-                    </h3>
-                    <span class="item-price text-primary">$1500</span>
-                  </div>
-                </div>                  
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="product-card position-relative pe-3 pb-3">
-                  <div class="image-holder">
-                    <img src="/storage/images/product-item6.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="https://demo.templatesjungle.com/ministore/shop.html#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">Pink watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$870</span>
-                  </div>
-                </div>                  
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="product-card position-relative pe-3 pb-3">
-                  <div class="image-holder">
-                    <img src="/storage/images/product-item7.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="https://demo.templatesjungle.com/ministore/shop.html#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">Heavy watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$680</span>
-                  </div>
-                </div>                  
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="product-card position-relative pe-3 pb-3">
-                  <div class="image-holder">
-                    <img src="/storage/images/product-item8.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="https://demo.templatesjungle.com/ministore/shop.html#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">spotted watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$750</span>
-                  </div>
-                </div>                  
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="product-card position-relative pe-3 pb-3">
-                  <div class="image-holder">
-                    <img src="/storage/images/product-item10.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="https://demo.templatesjungle.com/ministore/shop.html#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">Black Watch</a>
-                    </h3>
-                    <span class="item-price text-primary">$750</span>
-                  </div>
-                </div>                  
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="product-card position-relative pe-3 pb-3">
-                  <div class="image-holder">
-                    <img src="/storage/images/product-item5.jpg" alt="product-item" class="img-fluid">
-                  </div>
-                  <div class="cart-concern position-absolute">
-                    <div class="cart-button d-flex">
-                      <div class="btn-left">
-                        <a href="https://demo.templatesjungle.com/ministore/shop.html#" class="btn btn-medium btn-black">Add to Cart</a>
-                        <svg class="cart-outline position-absolute">
-                          <use xlink:href="#cart-outline"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-detail d-flex justify-content-between pt-3">
-                    <h3 class="card-title text-uppercase">
-                      <a href="https://demo.templatesjungle.com/ministore/shop.html#">Iphone 12</a>
-                    </h3>
-                    <span class="item-price text-primary">$1300</span>
-                  </div>
-                </div>                  
-              </div>
-            </div>
             <nav class="navigation paging-navigation text-center padding-medium" role="navigation">
               <div class="pagination loop-pagination d-flex justify-content-center align-items-center">
                 <a href="https://demo.templatesjungle.com/ministore/shop.html#">
@@ -265,6 +88,10 @@
                 </a>
               </div>
             </nav>
+              @else
+              No results
+              @endif
+            
           </main>
           <aside class="col-md-3">
             <div class="sidebar">
@@ -284,34 +111,33 @@
                 <h5 class="widget-title text-decoration-underline text-uppercase">{{ __('shop.categories') }}</h5>
                 <ul class="product-categories sidebar-list list-unstyled">
                   <li class="cat-item">
-                    <a href="https://demo.templatesjungle.com/collections/categories">{{ __('shop.all') }}</a>
+                    <a href="{{ route('shop') }}">{{ __('shop.all') }}</a>
                   </li>
                   <li class="cat-item">
-                    <a href="https://demo.templatesjungle.com/ministore/shop.html">{{ __('shop.accessories') }}</a>
+                    <a href="{{ route('shop_categorie', 'Accessories') }}">{{ __('shop.accessories') }}</a>
                   </li>
                   <li class="cat-item">
-                    <a href="https://demo.templatesjungle.com/ministore/shop.html">{{ __('shop.computers') }}</a>
+                  <a href="{{ route('shop_categorie', 'Computers') }}">{{ __('shop.computers') }}</a>
                   </li>
                   <li class="cat-item">
-                    <a href="https://demo.templatesjungle.com/ministore/shop.html">{{ __('shop.tablets') }}</a>
+                  <a href="{{ route('shop_categorie', 'Consoles') }}">{{ __('shop.consoles') }}</a>
                   </li>
                   <li class="cat-item">
-                    <a href="https://demo.templatesjungle.com/ministore/shop.html">{{ __('shop.sales') }}</a>
+                  <a href="{{ route('shop_categorie', 'Tablets') }}">{{ __('shop.tablets') }}</a>
+                  </li>
+                  <li class="cat-item">
+                    <a href="{{ route('sales') }}">{{ __('shop.sales') }}</a>
                   </li>
                 </ul>
               </div>
               <div class="widget-product-brands pt-3">
                 <h5 class="widget-title text-decoration-underline text-uppercase">{{ __('shop.brands') }}</h5>
                 <ul class="product-tags sidebar-list list-unstyled">
-                  <li class="tags-item">
-                    <a href="https://demo.templatesjungle.com/ministore/shop.html">Apple</a>
+                @foreach ($brands as $brand)  
+                <li class="tags-item">
+                    <a href="{{ route('shop_brand', $brand->name) }}">{{ $brand->name }}</a>
                   </li>
-                  <li class="tags-item">
-                    <a href="https://demo.templatesjungle.com/ministore/shop.html">Samsung</a>
-                  </li>
-                  <li class="tags-item">
-                    <a href="https://demo.templatesjungle.com/ministore/shop.html">Huwai</a>
-                  </li>
+                @endforeach
                 </ul>
               </div>
               <div class="widget-price-filter pt-3">

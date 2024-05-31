@@ -5,7 +5,7 @@
             <div class="row d-flex flex-wrap justify-content-between">
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu">
-                  <img src="storage/images/main-logo.png" alt="logo">
+                  <img src="{{ asset('storage/images/main-logo.png') }}" alt="logo">
                   <p>{{ __('nav.text') }}</p>
                   <div class="social-links">
                     <ul class="d-flex list-unstyled">
@@ -112,8 +112,8 @@
             <div class="Shipping d-flex">
               <p>{{ __('nav.ship') }}</p>
               <div class="card-wrap ps-2">
-                <img src="storage/images/dhl.png" alt="visa">
-                <img src="storage/images/shippingcard.png" alt="mastercard">
+                <img src="{{ asset('storage/images/dhl.png') }}" alt="visa">
+                <img src="{{ asset('storage/images/shippingcard.png') }}" alt="mastercard">
               </div>
             </div>
           </div>
@@ -121,9 +121,9 @@
             <div class="payment-method d-flex">
               <p>{{ __('nav.payment') }}</p>
               <div class="card-wrap ps-2">
-                <img src="storage/images/visa.jpg" alt="visa">
-                <img src="storage/images/mastercard.jpg" alt="mastercard">
-                <img src="storage/images/paypal.jpg" alt="paypal">
+                <img src="{{ asset('storage/images/visa.jpg') }}" alt="visa">
+                <img src="{{ asset('storage/images/mastercard.jpg') }}" alt="mastercard">
+                <img src="{{ asset('storage/images/paypal.jpg') }}" alt="paypal">
               </div>
             </div>
           </div>

@@ -782,6 +782,10 @@ h3.cart-title {
   }
 }
 
+img{
+  user-select: none;
+}
+
 /* 7. Instagram
 /*----------------------------------------------*/
 #instagram figure.instagram-item {

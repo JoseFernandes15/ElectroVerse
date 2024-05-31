@@ -98,6 +98,10 @@ CSS STRUCTURE:
     text-decoration: none;
     color: var(--primary-color);
   }
+  .hover_style:hover{
+    background-color: #535075 !important;
+    border-color: #535075 !important;
+  }
   
   /*------------ Background Color -----------*/
   .bg-gray {
