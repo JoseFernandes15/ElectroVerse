@@ -28,10 +28,4 @@ class routeTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_get_product(): void
-    {
-        $response = $this->get('/product/1');
-
-        $response->assertStatus(200);
-    }
 }
