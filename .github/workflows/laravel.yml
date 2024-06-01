@@ -19,10 +19,11 @@ jobs:
       uses: actions/checkout@v4
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-    - name: Update Composer and Add Pubkeys
+    - name: Trust Composer Public Keys
       run: |
-        composer self-update
-        composer self-update --update-keys
+        composer self-update --stable
+        composer --quiet config --global --auth github-oauth.github.com ${{ secrets.GITHUB_TOKEN }}
+        composer self-update --update-keys --no-interaction
     - name: Install Dependencies
       run: |
         composer install --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist || composer update --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
