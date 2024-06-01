@@ -21,9 +21,9 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Trust Composer Public Keys
       run: |
-        composer self-update --stable
-        composer --quiet config --global --auth github-oauth.github.com ${{ secrets.GITHUB_TOKEN }}
-        composer self-update --update-keys --no-interaction
+        curl -sS https://composer.github.io/pubkeys.html | grep -o '0x[0-9A-F]\{16\}' | xargs -n 1 -I {} gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys {}
+    - name: Update Composer
+      run: composer self-update
     - name: Install Dependencies
       run: |
         composer install --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist || composer update --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
