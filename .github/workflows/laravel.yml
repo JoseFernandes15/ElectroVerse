@@ -47,4 +47,4 @@ jobs:
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run: npm run test
+      run: ./vendor/bin/phpunit --verbose
