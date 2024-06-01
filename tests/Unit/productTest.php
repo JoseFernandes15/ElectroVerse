@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\ProductBrand;
 use App\Models\ProductType;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Test;
 
 
 class productTest extends TestCase
@@ -66,7 +67,6 @@ class productTest extends TestCase
         $this->assertNull(Product::find($productId));
     }
 
-    /** @test */
     public function test_product_type()
     {
         $type = ProductType::factory()->create();
@@ -75,7 +75,6 @@ class productTest extends TestCase
         $this->assertTrue($product->type()->exists());
     }
 
-    /** @test */
     public function test_product_brand()
     {
         $brand = ProductBrand::factory()->create();
