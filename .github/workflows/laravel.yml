@@ -26,7 +26,7 @@ jobs:
       run: composer self-update
     - name: Install Dependencies
       run: |
-        composer install --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist || composer update --no-dev -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist || composer update -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Diagnose Composer
       run: composer diagnose
     - name: Show PHP Version
@@ -47,4 +47,4 @@ jobs:
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run: ./vendor/bin/phpunit --verbose
+      run: php artisan test --verbose
