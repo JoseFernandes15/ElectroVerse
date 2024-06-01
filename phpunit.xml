@@ -3,6 +3,12 @@
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php"
          colors="true"
+         onvertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        processIsolation="false"
+        stopOnFailure="false"
+        treatWarningsAsErrors="false"
 >
     <testsuites>
         <testsuite name="Unit">
@@ -34,7 +40,4 @@
         <env name="SESSION_DRIVER" value="array"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
     </php>
-     <phpunit>
-        <treatWarningsAsErrors>false</treatWarningsAsErrors>
-    </phpunit>
 </phpunit>
