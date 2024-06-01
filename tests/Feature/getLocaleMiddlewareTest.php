@@ -31,7 +31,7 @@ class getLocaleMiddlewareTest extends TestCase
         $this->assertEquals('en', app()->getLocale());
     }
 
-    /** @test */
+    
     public function test_invalid_session_locale()
     {
         // Define um locale inválido na sessão
